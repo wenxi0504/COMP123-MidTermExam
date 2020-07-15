@@ -97,7 +97,7 @@ namespace COMP123_MidTermExam
             _numberList = new List<int>();
             _random = new Random();
 
-            //int randomNuber= _random.Next(1,50);
+            
         }
         // CREATE the private _build method here -----------------------------------
         private void _build()
@@ -154,9 +154,9 @@ namespace COMP123_MidTermExam
                 {
                     foreach (int x in NumberList)
                     {
-                        int randownNumber = random.Next(x);
-                        NumberList.RemoveAt(randownNumber);
-                        ElementList.Add(randownNumber);
+                        int randomNumber = random.Next(x);
+                        NumberList.RemoveAt(randomNumber);
+                        ElementList.Add(randomNumber);
                     }
                     ElementList.Sort();
                 }
