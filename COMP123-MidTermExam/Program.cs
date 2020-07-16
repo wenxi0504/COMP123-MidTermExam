@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace COMP123_MidTermExam
 {
+    //--Author's name:Wen Xu
+    //--Author’s student number:301098127,
+    //--Date last Modified:16,July,2020,
+    //--Program description:1.0.0 version is to randomly picks lottery numbers from 649 lotto and Max lotto.
+    //The program has four classes and one interfaces.The output should display 6 tickets with 6 non-repeat random numbers
+    // if user chooses 649 lotto or 7 tickets with 7 non-repeat random number if user chooses Max Lotto. 
+    //--Revision History:1.0.0
+
     /**
      * <summary>
      * This is the driver class

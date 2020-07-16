@@ -100,6 +100,8 @@ namespace COMP123_MidTermExam
             
         }
         // CREATE the private _build method here -----------------------------------
+        // private _build method is to create number between 1 to Setsize(in this case is 49)
+        //and add to the Number list
         private void _build()
         {
             for (int i = 1; i <= SetSize; i++)
@@ -141,7 +143,8 @@ namespace COMP123_MidTermExam
 
         // CREATE the public PickElements method here ----------------------------
         public void PickElement()
-        {
+        {  /* using if statement to clean previously Element list and Number list, then create 
+            * new number list so that the newest Element list can be created through for statement */
             if (ElementList.Count > 0)
             {
                 ElementList.Clear();
@@ -150,14 +153,16 @@ namespace COMP123_MidTermExam
             }
             for (int i = 1; i <=ElementNumber; i++) 
             {
-                   //select random number between 1 to 49
+                   //Select random number between 1 to 49
                     int randomNumber = random.Next(1,50);
-                    //remove selected number from Number list to avoid selecting repeated number 
+                    //Remove selected number from Number list to avoid selecting repeated number 
                     NumberList.Remove(randomNumber);
-                    //add selected number to Element list
+                    //Add selected number to Element list
                     ElementList.Add(randomNumber);
+                    //Sort element list ordered by ascending 
+                    ElementList.Sort();
             }
-            ElementList.Sort();
+            
         }
 
 

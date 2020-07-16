@@ -13,6 +13,7 @@ namespace COMP123_MidTermExam
      * 
      * @class Lotto649
      */
+    // define a base class that provides specific functionality (data and behavior) 
     public class Lotto649 : LottoGame, IGenerateLottoNumbers
     {
         // CONSTRUCTORS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -33,11 +34,11 @@ namespace COMP123_MidTermExam
 
         // CREATE the public GenerateLottoNumbers method here ----------------
         public void GenerateLottoNumbers()
-        {
+        {    //call the inherited public PickElements method and then outputs the results
             for (int i = 1; i <=6; i++)
             {
                 PickElement();
-                Console.WriteLine($"Ticket\t{i}\t"+ToString());
+                Console.WriteLine($"Ticket\t{i}:\t"+ToString());
             }
                 
                 
