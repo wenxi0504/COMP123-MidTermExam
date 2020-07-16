@@ -148,22 +148,16 @@ namespace COMP123_MidTermExam
                 NumberList.Clear();
                 _build();
             }
-            else
+            for (int i = 1; i <=ElementNumber; i++) 
             {
-                for (int i = 0; i <=ElementNumber; i++)
-                {
-                    foreach (int x in NumberList)
-                    {
-                        int randomNumber = random.Next(x);
-                        NumberList.RemoveAt(randomNumber);
-                        ElementList.Add(randomNumber);
-                    }
-                    ElementList.Sort();
-                }
-                
-
+                   //select random number between 1 to 49
+                    int randomNumber = random.Next(1,50);
+                    //remove selected number from Number list to avoid selecting repeated number 
+                    NumberList.Remove(randomNumber);
+                    //add selected number to Element list
+                    ElementList.Add(randomNumber);
             }
-
+            ElementList.Sort();
         }
 
 
